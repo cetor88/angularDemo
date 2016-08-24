@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Iniciando Amgular js</title>
+	<script type="text/javascript" src="js/apis/angular.min.js" ></script>
+	<script type="text/javascript" src="js/apis/jquery-1.9.1.js" ></script>
+	<script type="text/javascript" src="js/apis/ng-grid.min.js" ></script>
+	<script type="text/javascript" src="js/apis/ui-bootstrap-0.10.0.min.js" ></script>
+
+	<script type="text/javascript" src="js/http.js" ></script>
+
+	<style type="text/css" href="css/bootstrap.min.css" ></style>
+	<style type="text/css" href="css/ng-grid.min.css" ></style>
+
+</head>
+<body ng-app="miApp" ng-controller="myControl">
+	<ul>
+		<li ng-repeat="item in postArr">
+			<h2> {{item.title}}</h2>
+		</li>
+	</ul>
+	<label for="title">Titulo:</label>
+	<input type="text" name="title" ng-model="respuestaPost.title">
+	<br>
+	<label for="body">Body:</label>
+	<input type="text" name="body" ng-model="respuestaPost.body">
+	<br>
+	<input type="button" value="Consultar" ng-click="asignar()">
+
+
+</body>
+</html>

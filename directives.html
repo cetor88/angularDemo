@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Iniciando Amgular js</title>
+	
+	<script type="text/javascript" src="js/apis/jquery-1.9.1.js" ></script>
+	<script type="text/javascript" src="js/apis/ng-grid.min.js" ></script>
+	<script type="text/javascript" src="js/apis/ui-bootstrap-0.10.0.min.js" ></script>
+
+	<script type="text/javascript" src="js/apis/angular.min.js" ></script>
+	<script type="text/javascript" src="js/directives.js" ></script>
+	
+
+	<style type="text/css" href="css/bootstrap.min.css" ></style>
+	<style type="text/css" href="css/ng-grid.min.css" ></style>
+
+</head>
+<body ng-app="miApp">
+	<div  ng-init="firstName='Las directivas son bloques de codigo para la logica de  nuestra aplicacion'">
+
+		<p><span ng-bind="firstName"></span></p>
+		
+	</div>
+	<div ng-controller="myControl">
+		<label>Full name: {{nombre +" "+ apellido}} </label> <br>
+		<label for="nombre" />
+		<input type="text" ng-model="nombre" name="nombre"/>
+		
+		<label for="apellido" />
+		<input type="text" ng-model="apellido" name="apellido"/>
+
+	</div>
+
+
+	<div w3-test-directive>
+		
+	</div>
+
+	<div w3-test-directive2> </div>
+
+	<div class="miDirective" ng-init="person=['A','B','C']">
+		<ul>
+			<li ng-repeat="x in person">
+				{{x}}
+			</li>
+		</ul>
+	</div>
+
+	
+
+</body>
+</html>
